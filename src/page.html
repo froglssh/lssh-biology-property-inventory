@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light"><title>麗山高中生物科財產管理與盤點系統</title><style>/*__CSS__*/</style></head>
+<body>
+<aside class="sidebar">
+ <div class="brand"><span class="brand-icon">葉</span><div>麗山高中 <small>BIOLOGY LAB</small></div></div>
+ <div class="side-title">生物科<br>財產管理與<br>盤點系統<span>跨年度管理 · 設備有跡</span></div>
+ <label class="year-label" for="year">清冊年度</label><select id="year" aria-label="選擇清冊年度"></select>
+ <nav aria-label="主要功能">
+  <button data-view="search" class="nav active"><span>⌕</span><span class="nav-label">快速查詢</span><span class="mobile-nav-label">搜尋</span><small>01</small></button>
+  <button data-view="動產" class="nav"><span>▣</span><span class="nav-label">動產清冊</span><span class="mobile-nav-label">動產</span><small>02</small></button>
+  <button data-view="物品" class="nav"><span>▤</span><span class="nav-label">物品清冊</span><span class="mobile-nav-label">物品</span><small>03</small></button>
+  <button data-view="stats" class="nav"><span>▥</span><span class="nav-label">分類統計</span><span class="mobile-nav-label">統計</span><small>04</small></button>
+  <button data-view="records" class="nav"><span>✓</span><span class="nav-label">盤點紀錄</span><span class="mobile-nav-label">紀錄</span><small>05</small></button>
+  <button data-view="manage" class="nav"><span>⇄</span><span class="nav-label">年度與異動</span><span class="mobile-nav-label">更多</span><small>06</small></button>
+ </nav>
+ <div class="mobile-tools"><span id="mobileSaveState">本機離線工作</span><button class="text-button" data-action="backup">↓ 完整備份</button></div>
+ <div class="side-bottom"><span class="dot"></span> 本機離線工作<span id="saveState" role="status">正在載入…</span><button id="backup" class="button backup">↓ 匯出完整備份</button><p>勾選與備註存在此瀏覽器。<br>換裝置前，請先匯出備份。</p></div>
+</aside>
+<main>
+ <header class="topbar"><span>設備管理 <span class="sep">/</span> <span id="breadcrumb">快速查詢</span></span><span class="edition" id="edition">跨年度財產管理</span></header>
+ <section id="intro" class="intro"><div><p class="eyebrow">LISHAN / PROPERTY INVENTORY</p><h1 id="pageTitle">找到設備，<em>開始盤點。</em></h1><p id="pageSubtitle">輸入名稱、編號或分號，即刻找到原始清冊中的每一筆資料。</p></div><div class="stamp">BIO<br><span>資產紀錄</span></div></section>
+ <section class="save-toolbar" aria-label="工作儲存"><div><span class="save-dot"></span><b>自動儲存已開啟</b><span id="saveSummary">本機工作紀錄</span></div><div class="tools"><button class="button" data-action="saveNow">立即儲存 <kbd>⌘ / Ctrl S</kbd></button><button class="button primary" data-action="saveFile">↓ 儲存工作檔</button><button class="button" data-action="undo">↶ 復原上次修改</button></div></section>
+ <button class="mobile-overview-toggle" data-action="toggleOverview" aria-expanded="false" aria-controls="metrics"><span>盤點進度</span><b id="overviewLabel">載入中…</b><span>總覽 ▾</span></button>
+ <section id="metrics" class="metrics" aria-label="清冊概況"></section>
+ <section class="search-panel" id="searchPanel"><label for="query">快速定位一筆財產 <span>名稱 / 編號 / 分號 / 型號</span></label><div class="search-box"><span aria-hidden="true">⌕</span><input id="query" type="search" autocomplete="off" inputmode="search" enterkeyhint="search" placeholder="名稱、編號或分號" aria-label="財產快速搜尋"><button id="clearQuery" title="清除搜尋" aria-label="清除搜尋">×</button><button class="keyboard-mode" data-action="queryKeyboard" aria-pressed="false" aria-label="切換數字搜尋鍵盤">123</button><kbd>/</kbd></div><div class="search-hints">試試看 <button data-quick="平板">平板</button><button data-quick="電腦">電腦</button><button data-quick="顯微鏡">顯微鏡</button><span>分號可省略前導零；同一分號可能對應多筆財產。</span></div></section>
+ <details id="filterDrawer" class="filter-drawer" open><summary><span>地點 / 篩選與排序</span><b id="mobileFilterState">全部地點 · 全部項目</b></summary><section id="filters" class="filters"><label>存放位置<select id="locationFilter"><option value="">全部地點</option></select></label><label>設備分類<select id="categoryFilter"><option value="">全部分類</option></select></label><label>盤點／狀態<select id="checkFilter"><option value="">全部項目</option><option value="unchecked">尚未盤點</option><option value="checked">已勾選盤點</option><option value="result">未找到／借出／待確認</option><option value="notes">有備註／待處理</option><option value="active">在冊（排除已報廢／移出）</option><option>待維修</option><option>待報廢</option><option>已報廢</option><option>移出</option><option>待確認</option></select></label><label>排列方式<select id="sort"><option value="location">存放位置 → 名稱</option><option value="name">財產名稱 → 位置</option><option value="number">編號 → 分號</option><option value="page">原始清冊頁次</option><option value="checked">未盤點優先</option></select></label><button id="resetFilters" class="text-button">清除篩選</button></section>
+ </details>
+ <section id="content" aria-live="polite"></section>
+ <footer>麗山高中生物科 <span>原始清冊留存 · 異動另記 · 每筆可回查</span><button id="help" class="text-button">使用說明</button></footer>
+</main>
+<dialog id="fieldDialog" class="field-dialog"><div id="fieldBody"></div></dialog>
+<dialog id="detail"><div id="detailBody"></div></dialog>
+<dialog id="actionDialog"><div id="actionBody"></div></dialog>
+<dialog id="importDialog"><div id="importBody"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script id="seed" type="application/json">/*__SEED__*/</script>
+<script id="pdfworker" type="text/plain">/*__WORKER__*/</script>
+<script>/*__APP__*/</script>
+</body></html>

@@ -1,0 +1,41 @@
+{
+  "tool": "Poppler pdftotext -bbox-layout (independent of PDF.js)",
+  "total_rows": 821,
+  "checks": [
+    {
+      "file": "115生物科動產盤點紀錄表.pdf",
+      "rows": 373,
+      "pages": 38,
+      "checks": [
+        "sha256",
+        "id",
+        "subnumber",
+        "page",
+        "row",
+        "full_description",
+        "book_value",
+        "location",
+        "dates"
+      ],
+      "passed": true
+    },
+    {
+      "file": "115生物科物品盤點紀錄表.pdf",
+      "rows": 448,
+      "pages": 45,
+      "checks": [
+        "sha256",
+        "id",
+        "subnumber",
+        "page",
+        "row",
+        "full_description",
+        "book_value",
+        "location",
+        "dates"
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

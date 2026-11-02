@@ -1,0 +1,168 @@
+{
+  "builtAt": "2026-11-02T14:16:43.555Z",
+  "parser": "PDF.js 6.5.438 / Lishan template v1",
+  "sources": [
+    {
+      "name": "115生物科動產盤點紀錄表.pdf",
+      "sourcePath": "/Users/froglssh/Library/CloudStorage/GoogleDrive-frog@lssh.tp.edu.tw/我的雲端硬碟/03麗山高中/07生物科/生物科財產/115財產/115生物科動產盤點紀錄表.pdf",
+      "sha256": "0e33ac0b3636c67b4aaa0d39fe0d2829040f2ccac5bb3d737fb0a6da4d8bd1ab",
+      "pages": 38,
+      "parsed": 373,
+      "expected": 373,
+      "perPage": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        3
+      ],
+      "allOriginallyPending": true
+    },
+    {
+      "name": "115生物科物品盤點紀錄表.pdf",
+      "sourcePath": "/Users/froglssh/Library/CloudStorage/GoogleDrive-frog@lssh.tp.edu.tw/我的雲端硬碟/03麗山高中/07生物科/生物科財產/115財產/115生物科物品盤點紀錄表.pdf",
+      "sha256": "25148274a26b87de48eab07c0b0832193708a30b499a791c3b71887cf0167c7f",
+      "pages": 45,
+      "parsed": 448,
+      "expected": 448,
+      "perPage": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        8
+      ],
+      "allOriginallyPending": true
+    }
+  ],
+  "total": 821,
+  "categories": [
+    {
+      "name": "其他",
+      "count": 203,
+      "movable": 42,
+      "goods": 161
+    },
+    {
+      "name": "顯微與光學",
+      "count": 188,
+      "movable": 139,
+      "goods": 49
+    },
+    {
+      "name": "家具與收納",
+      "count": 131,
+      "movable": 53,
+      "goods": 78
+    },
+    {
+      "name": "感測與量測",
+      "count": 78,
+      "movable": 23,
+      "goods": 55
+    },
+    {
+      "name": "攝影與影像",
+      "count": 72,
+      "movable": 15,
+      "goods": 57
+    },
+    {
+      "name": "平板",
+      "count": 48,
+      "movable": 35,
+      "goods": 13
+    },
+    {
+      "name": "電腦",
+      "count": 44,
+      "movable": 44,
+      "goods": 0
+    },
+    {
+      "name": "資訊周邊",
+      "count": 35,
+      "movable": 9,
+      "goods": 26
+    },
+    {
+      "name": "實驗設備",
+      "count": 22,
+      "movable": 13,
+      "goods": 9
+    }
+  ]
+}

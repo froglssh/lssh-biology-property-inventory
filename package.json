@@ -1,0 +1,15 @@
+{
+  "name": "lishan-biology-property-workstation",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "description": "麗山高中生物科離線財產查詢盤點工具",
+  "devDependencies": {
+    "pdfjs-dist": "6.5.438",
+    "esbuild": "0.28.2"
+  },
+  "scripts": {
+    "test": "node --test tests/core.test.mjs tests/workflows.test.mjs",
+    "build": "node src/build.mjs"
+  }
+}
