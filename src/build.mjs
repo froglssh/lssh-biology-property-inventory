@@ -30,5 +30,6 @@ const worker=fs.readFileSync(path.join(deps,'pdfjs-dist/build/pdf.worker.mjs'),'
 const safe=s=>s.replace(/<\/script/gi,'<\\/script');
 const html=fs.readFileSync(path.join(app,'src/page.html'),'utf8').replace('/*__CSS__*/',()=>fs.readFileSync(path.join(app,'src/style.css'),'utf8')+'\n'+fs.readFileSync(path.join(app,'src/mobile.css'),'utf8')).replace('/*__SEED__*/',()=>safe(JSON.stringify(seed))).replace('/*__WORKER__*/',()=>safe(worker)).replace('/*__APP__*/',()=>safe(output.outputFiles[0].text));
 fs.writeFileSync(path.join(app,'生物科財產工作站.html'),html);
+fs.writeFileSync(path.join(app,'index.html'),html);
 fs.copyFileSync(path.join(deps,'pdfjs-dist/LICENSE'),path.join(app,'vendor/PDFjs-LICENSE.txt'));
 console.log(`已產生離線 HTML（${(Buffer.byteLength(html)/1024/1024).toFixed(2)} MB），含原件 PDF 與離線解析器。`);
